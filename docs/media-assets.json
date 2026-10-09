@@ -1,0 +1,105 @@
+{
+  "folder": "attique-umaira-invitation-20261009",
+  "assets": [
+    {
+      "name": "envelope",
+      "type": "image",
+      "publicId": "attique-umaira-invitation-20261009/envelope",
+      "url": "https://res.cloudinary.com/sergteqh/image/upload/v1791545658/attique-umaira-invitation-20261009/envelope.webp",
+      "bytes": 42518,
+      "originalBytes": 2207213,
+      "width": 720,
+      "height": 1279
+    },
+    {
+      "name": "hero-poster",
+      "type": "image",
+      "publicId": "attique-umaira-invitation-20261009/hero-poster",
+      "url": "https://res.cloudinary.com/sergteqh/image/upload/v1791545661/attique-umaira-invitation-20261009/hero-poster.webp",
+      "bytes": 84310,
+      "originalBytes": 148380,
+      "width": 720,
+      "height": 1280
+    },
+    {
+      "name": "floral-left",
+      "type": "image",
+      "publicId": "attique-umaira-invitation-20261009/floral-left",
+      "url": "https://res.cloudinary.com/sergteqh/image/upload/v1791545662/attique-umaira-invitation-20261009/floral-left.webp",
+      "bytes": 54978,
+      "originalBytes": 61160,
+      "width": 448,
+      "height": 686
+    },
+    {
+      "name": "floral-right",
+      "type": "image",
+      "publicId": "attique-umaira-invitation-20261009/floral-right",
+      "url": "https://res.cloudinary.com/sergteqh/image/upload/v1791545664/attique-umaira-invitation-20261009/floral-right.webp",
+      "bytes": 54668,
+      "originalBytes": 60460,
+      "width": 472,
+      "height": 717
+    },
+    {
+      "name": "paper-introduction",
+      "type": "image",
+      "publicId": "attique-umaira-invitation-20261009/paper-introduction",
+      "url": "https://res.cloudinary.com/sergteqh/image/upload/v1791545664/attique-umaira-invitation-20261009/paper-introduction.webp",
+      "bytes": 10874,
+      "originalBytes": 43088,
+      "width": 900,
+      "height": 446
+    },
+    {
+      "name": "paper-schedule",
+      "type": "image",
+      "publicId": "attique-umaira-invitation-20261009/paper-schedule",
+      "url": "https://res.cloudinary.com/sergteqh/image/upload/v1791545665/attique-umaira-invitation-20261009/paper-schedule.webp",
+      "bytes": 5560,
+      "originalBytes": 23880,
+      "width": 900,
+      "height": 349
+    },
+    {
+      "name": "paper-family",
+      "type": "image",
+      "publicId": "attique-umaira-invitation-20261009/paper-family",
+      "url": "https://res.cloudinary.com/sergteqh/image/upload/v1791545666/attique-umaira-invitation-20261009/paper-family.webp",
+      "bytes": 123254,
+      "originalBytes": 313922,
+      "width": 900,
+      "height": 900
+    },
+    {
+      "name": "rose",
+      "type": "image",
+      "publicId": "attique-umaira-invitation-20261009/rose",
+      "url": "https://res.cloudinary.com/sergteqh/image/upload/v1791545667/attique-umaira-invitation-20261009/rose.webp",
+      "bytes": 4360,
+      "originalBytes": 10630,
+      "width": 160,
+      "height": 147
+    },
+    {
+      "name": "envelope-opening",
+      "type": "video",
+      "publicId": "attique-umaira-invitation-20261009/envelope-opening",
+      "url": "https://res.cloudinary.com/sergteqh/video/upload/v1791545668/attique-umaira-invitation-20261009/envelope-opening.mp4",
+      "bytes": 349605,
+      "originalBytes": 2321710,
+      "width": 540,
+      "height": 960
+    },
+    {
+      "name": "garden-swans",
+      "type": "video",
+      "publicId": "attique-umaira-invitation-20261009/garden-swans",
+      "url": "https://res.cloudinary.com/sergteqh/video/upload/v1791545672/attique-umaira-invitation-20261009/garden-swans.mp4",
+      "bytes": 782622,
+      "originalBytes": 2948983,
+      "width": 540,
+      "height": 960
+    }
+  ]
+}

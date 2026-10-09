@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-const imagePath = '/images/Embossed Ivory Envelope with A&U Wax Seal.png';
-const videoPath = '/images/Edit_video_monogram_on_seal_20261009143255.mp4';
+import { gardenMedia, imageAtWidth } from '../data/gardenMedia';
+const imagePath = gardenMedia.envelope;
+const videoPath = gardenMedia.envelopeOpening;
 export function EnvelopeIntro({ onOpenComplete, onSealClick }: { onOpenComplete: () => void; onSealClick?: () => void }) {
   const [stage, setStage] = useState<'idle' | 'playing' | 'leaving'>('idle');
   const [hasFrame, setHasFrame] = useState(false);
@@ -33,7 +34,7 @@ export function EnvelopeIntro({ onOpenComplete, onSealClick }: { onOpenComplete:
       <video ref={video} className={hasFrame ? 'opening-film visible' : 'opening-film'} muted playsInline preload="none" onPlaying={() => setHasFrame(true)} onEnded={finish} onError={() => { if (stage === 'playing') finish(); }} aria-hidden="true">
         <source src={videoPath} type="video/mp4" />
       </video>
-      <img className={hasFrame ? 'envelope-poster fading' : 'envelope-poster'} src={imagePath} alt="Embossed ivory envelope with an A and U burgundy wax seal" fetchPriority="high" />
+      <img className={hasFrame ? 'envelope-poster fading' : 'envelope-poster'} src={imagePath} srcSet={[360, 540, 720].map(width => `${imageAtWidth(imagePath, width)} ${width}w`).join(', ')} sizes="(max-width: 560px) 100vw, 56.25vh" alt="Embossed ivory envelope with an A and U burgundy wax seal" fetchPriority="high" />
       {stage === 'idle' && <button className="open-envelope" onClick={open} aria-label="Open wedding invitation" autoFocus><span>Tap to open</span></button>}
       {stage === 'playing' && <p className="opening-status" role="status">Opening your invitation…</p>}
       <button className="skip-intro" onClick={finish}>{stage === 'idle' ? 'View invitation' : 'Skip opening'}</button>

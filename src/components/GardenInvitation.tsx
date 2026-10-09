@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
 import { AnimatePresence, motion, useInView, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import { ArrowDown, ArrowUpRight, CalendarDays, MapPin, Music2, Pause, Phone } from 'lucide-react';
+import { gardenMedia as media } from '../data/gardenMedia';
 import { gardenWedding as wedding } from '../data/gardenWedding';
 import { countdownAt, downloadCalendar, mapsLink } from '../utils/invitation';
 import { GardenMusic } from '../utils/gardenMusic';
@@ -61,9 +62,9 @@ function EventTimeline() {
   }, []);
 
   return <div ref={timeline} className="event-timeline">
-    <motion.img ref={rose} className="timeline-rose" src="/images/reference/rose.webp" alt="" aria-hidden="true" loading="lazy" style={{ y: reduced ? track.start : y }}/>
+    <motion.img ref={rose} className="timeline-rose" src={media.rose} alt="" aria-hidden="true" loading="lazy" style={{ y: reduced ? track.start : y }}/>
     {wedding.events.map((event,i)=><Reveal key={event.id} delay={.1*i} duration={1.5} className="event-entry"><div className="event-date"><strong>{event.dayNumber}</strong><span>{event.month}</span><small>{event.day} · 2026</small></div>
-      <div className="event-details"><h3>{event.name}</h3><dl>{event.times.map(time=><div key={time.label}><dt>{time.label}</dt><dd>{time.time}</dd></div>)}</dl><a href={`#venue-${event.venueId}`} className="event-venue"><MapPin size={13}/>{event.venueId==='home'?'Al Noor Garden':'The Grand Palace'}<ArrowUpRight size={13}/></a></div>
+      <div className="event-details"><h3>{event.name}</h3><dl>{event.times.map(time=><div key={time.label}><dt>{time.label}</dt><dd>{time.time}</dd></div>)}</dl><a href={`#venue-${event.venueId}`} className="event-venue"><MapPin size={13}/><span>{event.venueId==='home'?'Al Noor Garden':'The Grand Palace'}</span><ArrowUpRight size={13}/></a></div>
     </Reveal>)}
   </div>;
 }
@@ -82,7 +83,7 @@ function HeroFilm() {
     document.addEventListener('visibilitychange', sync);
     return () => document.removeEventListener('visibilitychange', sync);
   }, [inView, reduced]);
-  return <video ref={video} className="garden-hero-video" poster="/images/reference/garden-swans-poster.webp" autoPlay={!reduced} muted loop playsInline preload="metadata" aria-hidden="true"><source src="/images/reference/garden-swans.mp4" type="video/mp4"/></video>;
+  return <video ref={video} className="garden-hero-video" poster={media.heroPoster} autoPlay={!reduced} muted loop playsInline preload="metadata" aria-hidden="true"><source src={media.gardenSwans} type="video/mp4"/></video>;
 }
 
 export function GardenInvitation() {
@@ -103,7 +104,7 @@ export function GardenInvitation() {
     <a className="skip-content" href="#programme">Skip to wedding details</a>
     <main className="garden-page">
       <section className="garden-hero" aria-label="Attique and Umaira wedding invitation">
-        <img className="garden-hero-image" src="/images/reference/garden-swans-poster.webp" alt="" fetchPriority="high"/>
+        <img className="garden-hero-image" src={media.heroPoster} alt="" fetchPriority="high"/>
         <HeroFilm/>
         <div className="hero-letter">
           <motion.p className="hero-kicker" initial={reduced ? false : {opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:2,delay:.1}}>Wedding Day</motion.p>
@@ -115,7 +116,7 @@ export function GardenInvitation() {
       </section>
 
       <section id="invitation" className="paper-panel introduction" aria-labelledby="invitation-heading">
-        <img className="reference-floral floral-left" src="/images/reference/floral-left.webp" alt="" loading="lazy"/><img className="reference-floral floral-right" src="/images/reference/floral-right.webp" alt="" loading="lazy"/>
+        <img className="reference-floral floral-left" src={media.floralLeft} alt="" loading="lazy"/><img className="reference-floral floral-right" src={media.floralRight} alt="" loading="lazy"/>
         <Reveal duration={1}><p className="bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
           <p className="bismillah-translation">In the name of Allah, the Most Gracious, the Most Merciful</p>
         </Reveal>
@@ -143,7 +144,7 @@ export function GardenInvitation() {
       </section>
 
       <section className="paper-panel family-section" aria-labelledby="family-heading">
-        <img className="family-rose" src="/images/reference/rose.webp" alt="" loading="lazy"/><Reveal><h2 id="family-heading">Looking forward</h2><Flourish/>
+        <img className="family-rose" src={media.rose} alt="" loading="lazy"/><Reveal><h2 id="family-heading">Looking forward</h2><Flourish/>
         <div className="looking-forward">{wedding.lookingForward.map(name=><p key={name}>{name}</p>)}</div>
         <p className="closing-dua">With the love and blessings of our families.</p></Reveal>
       </section>

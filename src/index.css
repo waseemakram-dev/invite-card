@@ -575,11 +575,11 @@ h1 em {
 
 .event-entry {
     display: grid;
-    grid-template-columns: 35% 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     text-align: left;
     position: relative;
     padding: 26px 0 29px;
-    gap: 28px
+    gap: 0
 }
 
 .event-entry:before {
@@ -601,12 +601,12 @@ h1 em {
     width: 9px;
     height: 9px;
     background: #b39159;
-    transform: rotate(45deg) translateX(-74%);
+    transform: translateX(-50%) rotate(45deg);
 }
 
 .event-date {
     text-align: center;
-    padding-right: 4px
+    padding-right: 28px
 }
 
 .event-date strong {
@@ -631,7 +631,7 @@ h1 em {
 
 .event-details {
     min-width: 0;
-    padding-left: 117px
+    padding-left: 28px
 }
 
 .event-details h3 {
@@ -675,6 +675,11 @@ h1 em {
 
 .event-venue svg {
     width: 12px
+}
+
+.event-venue span {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .locations {
@@ -1161,7 +1166,7 @@ h1 em {
     }
 
     .event-entry {
-        gap: 24px
+        gap: 0
     }
 
     .event-date strong {
@@ -1177,7 +1182,7 @@ h1 em {
     }
 
     .event-details h3 {
-        font-size: 34px
+        font-size: clamp(27px, 8vw, 34px)
     }
 
     .event-details dt {
@@ -1374,7 +1379,7 @@ h1 em {
 }
 
 .paper-panel {
-    background-image: url('/images/reference/paper-introduction.webp');
+    background-image: url('https://res.cloudinary.com/sergteqh/image/upload/f_auto,q_auto/v1791545664/attique-umaira-invitation-20261009/paper-introduction.webp');
     background-size: 130% 100%;
     background-position: center;
     background-repeat: no-repeat
@@ -1400,14 +1405,14 @@ h1 em {
 }
 
 .programme {
-    background-image: url('/images/reference/paper-schedule.webp')
+    background-image: url('https://res.cloudinary.com/sergteqh/image/upload/f_auto,q_auto/v1791545665/attique-umaira-invitation-20261009/paper-schedule.webp')
 }
 
 .timeline-rose {
     position: absolute;
     width: 42px;
     top: 0;
-    left: 45%;
+    left: calc(50% - 21px);
     opacity: .95;
     z-index: 2;
     pointer-events: none;
@@ -1415,7 +1420,7 @@ h1 em {
 }
 
 .family-section {
-    background-image: url('/images/reference/paper-family.webp')
+    background-image: url('https://res.cloudinary.com/sergteqh/image/upload/f_auto,q_auto/v1791545666/attique-umaira-invitation-20261009/paper-family.webp')
 }
 
 .family-rose {
