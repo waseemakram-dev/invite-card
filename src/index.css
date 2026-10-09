@@ -1420,7 +1420,27 @@ h1 em {
 }
 
 .family-section {
-    background-image: url('https://res.cloudinary.com/sergteqh/image/upload/f_auto,q_auto/v1791545666/attique-umaira-invitation-20261009/paper-family.webp')
+    /* The floral sprite is not a paper texture: keep ornaments outside the text. */
+    padding-top: 110px;
+    background-image: url('https://res.cloudinary.com/sergteqh/image/upload/f_auto,q_auto/v1791545664/attique-umaira-invitation-20261009/paper-introduction.webp');
+}
+
+.family-border {
+    position: absolute;
+    top: -18px;
+    width: 130px;
+    max-width: 32%;
+    height: 104px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.family-border-left {
+    left: -8px;
+}
+
+.family-border-right {
+    right: -8px;
 }
 
 .family-rose {

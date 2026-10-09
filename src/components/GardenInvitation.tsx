@@ -144,6 +144,8 @@ export function GardenInvitation() {
       </section>
 
       <section className="paper-panel family-section" aria-labelledby="family-heading">
+        <img className="family-border family-border-left" src={media.floralLeft} alt="" aria-hidden="true" loading="lazy"/>
+        <img className="family-border family-border-right" src={media.floralRight} alt="" aria-hidden="true" loading="lazy"/>
         <img className="family-rose" src={media.rose} alt="" loading="lazy"/><Reveal><h2 id="family-heading">Looking forward</h2><Flourish/>
         <div className="looking-forward">{wedding.lookingForward.map(name=><p key={name}>{name}</p>)}</div>
         <p className="closing-dua">With the love and blessings of our families.</p></Reveal>
