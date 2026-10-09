@@ -1,0 +1,6 @@
+{
+  "name": "Attique & Umaira — Royal Wedding Invitation",
+  "description": "Luxury royal digital wedding invitation for Dr. Hafiz Muhammad Attique Zahid & Umaira Mehmood Khan, inspired by European editorial and South Asian royal aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

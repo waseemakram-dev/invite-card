@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-dark: #11110F;
+    --color-charcoal: #1A1A16;
+    --color-gold-antique: #B89A67;
+    --color-gold-champagne: #D9BF8C;
+    --color-champagne-warm: #E8D5B9;
+    --color-ivory: #F8F0E8;
+    --color-blush: #F2E2E5;
+    --color-rose-dusty: #D8BDC1;
+    --color-text-brown: #493B3A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #11110F;
+    color: #493B3A;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-script {
+  font-family: 'Pinyon Script', 'Alex Brush', 'Great Vibes', cursive;
+}
+
+.font-pinyon {
+  font-family: 'Pinyon Script', cursive;
+}
+
+.font-alex {
+  font-family: 'Alex Brush', cursive;
+}
+
+.font-parisienne {
+  font-family: 'Parisienne', cursive;
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-display-luxury {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-royal {
+  font-family: 'Cinzel', serif;
+}
+
+.font-arabic {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+}
+
+/* Gold shimmer animation */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.gold-gradient-text {
+  background: linear-gradient(
+    135deg,
+    #B89A67 0%,
+    #F3E2C7 25%,
+    #D9BF8C 50%,
+    #AA8955 75%,
+    #F8F0E8 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #B89A67 0%,
+    #FFECC7 50%,
+    #B89A67 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 4s ease-in-out infinite;
+}
+
+/* Subtle gold foil border */
+.gold-foil-border {
+  border-image: linear-gradient(
+    to bottom,
+    rgba(217, 191, 140, 0.7),
+    rgba(184, 154, 103, 0.3),
+    rgba(217, 191, 140, 0.7)
+  ) 1;
+}
+
+/* Paper texture simulation */
+.bg-parchment-pattern {
+  background-color: #F8F0E8;
+  background-image: radial-gradient(rgba(184, 154, 103, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-blush-pattern {
+  background-color: #F6EAEC;
+  background-image: 
+    radial-gradient(rgba(184, 154, 103, 0.07) 1px, transparent 1px),
+    radial-gradient(rgba(216, 189, 193, 0.15) 1px, transparent 1px);
+  background-size: 28px 28px, 14px 14px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* Wax seal emboss effect */
+.wax-shadow {
+  box-shadow: 
+    0 10px 25px -5px rgba(24, 16, 14, 0.6),
+    0 4px 10px -2px rgba(24, 16, 14, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.4),
+    inset 0 -3px 6px rgba(100, 40, 40, 0.3);
+}
+
+.wax-inner-glow {
+  box-shadow: 
+    inset 0 0 15px rgba(217, 191, 140, 0.35),
+    0 0 20px rgba(217, 191, 140, 0.2);
+}
