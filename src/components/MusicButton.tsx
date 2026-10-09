@@ -19,7 +19,13 @@ export const MusicButton: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50 pointer-events-auto">
+    <div
+      className="fixed z-50 pointer-events-auto"
+      style={{
+        bottom: '24px',
+        right: 'max(20px, calc(50% - 220px + 20px))',
+      }}
+    >
       <motion.button
         onClick={handleToggle}
         whileHover={{ scale: 1.08 }}
